@@ -23,4 +23,4 @@ jobs:
         with:
           push: true
           # this is to get the github commit id first 6 characters
-          tags: kesarikumaran/python-app:${GITHUB_SHA::6}
+          tags: kesarikumaran/python-app:${{ github.sha }}

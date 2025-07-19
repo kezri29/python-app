@@ -10,7 +10,8 @@ def details():
         'time': datetime.datetime.now().isoformat(),
         'version': '1.0.0',
         'hostname': socket.gethostname(),
-        'description': 'This is a sample Flask application for demonstration purposes.'
+        'description': 'This is a sample Flask application for demonstration purposes.',
+        'author': 'Kesarikumaran'
     })
 
 @app.route('/api/v1/healthz')

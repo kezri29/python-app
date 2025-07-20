@@ -40,9 +40,9 @@ jobs:
       - name: Install ArgoCD
         shell: bash
         run: |
-          curl -ksSL -o argocd-linux-amd64 http://argocd-server.argocd/download/argocd-linux-amd64
+          curl -ksSL -o argocd http://argocd-server.argocd/download/argocd-linux-amd64
           chmod +x argocd
-          mv ./argocd /use/local/bin/argocd
+          sudo mv ./argocd /use/local/bin/argocd
     
     # this needs will create a dependency on the ci job. (like after ci cd must be performed)
       - name: ArgoCD app sync

@@ -30,12 +30,31 @@ jobs:
         with:
           push: true
           tags: kesarikumaran/python-app:${{ steps.vars.outputs.short_sha }}
+    outputs: 
+      commit_id: ${{ steps.vars.outputs.short_sha }}
 
 # continuous deployment job
   cd:
     needs: ci
     runs-on: self-hosted
     steps:
+    # Cloning the repository to access the values.yaml file
+      - uses: actions/checkout@v3
+
+    # Modifying the values.yaml file to use the short SHA from the CI job
+      - name: Modify values yaml file
+        shell: bash
+        run: |
+          echo ${{needs.ci.outputs.commit_id}}
+          pip install yq
+          yq -Yi '.image.tag = "${{needs.ci.outputs.commit_id}}"' charts/python-app/values.yaml
+
+    # pushing changes to the github repo before syncing the argocd pipeline
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Update values.yaml with commit ID - ${{needs.ci.outputs.commit_id}}"
+
     # need to install argocd cli inorder to connect to the argocd server for deployment
       - name: Install ArgoCD
         shell: bash

@@ -11,7 +11,7 @@ def details():
         'version': '1.0.0',
         'hostname': socket.gethostname(),
         'description': 'This is a sample Flask application for demonstration purposes.',
-        'author': 'Kesarikumaran S 22'
+        'author': 'Kesarikumaran S 22 years old and kickin'
     })
 
 @app.route('/api/v1/healthz')

@@ -8,12 +8,13 @@ on:
       - main
 
 jobs:
+# continuous integration job
   ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
+  # use to shorten the commit SHA for tagging the Docker image
       - name: Set short SHA
         id: vars
         run: echo "short_sha=${GITHUB_SHA::6}" >> $GITHUB_OUTPUT
@@ -30,11 +31,20 @@ jobs:
           push: true
           tags: kesarikumaran/python-app:${{ steps.vars.outputs.short_sha }}
 
+# continuous deployment job
   cd:
+    needs: ci
     runs-on: self-hosted
     steps:
+    # need to install argocd cli inorder to connect to the argocd server for deployment
+      - name: Install ArgoCD
+        shell: bash
+        run: |
+          curl -ksSL -o argocd-linux-amd64 http://argocd-server.argocd/download/argocd-linux-amd64
+          chmod +x argocd
+          mv ./argocd /use/local/bin/argocd
+    
     # this needs will create a dependency on the ci job. (like after ci cd must be performed)
-      - needs: ci
       - name: ArgoCD app sync
         shell: bash
         run: |

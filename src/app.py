@@ -8,12 +8,12 @@ app = Flask(__name__)
 def infoUrl():
     return jsonify({
         'time': datetime.datetime.now().isoformat(),
-        'version': '2.0.0',
+        'version': '2.1.2',
         'hostname': socket.gethostname(),
         'description': 'This is a sample Flask application for demonstration purposes that I have deployed in Kubernetes.',
     })
 
-@app.route('/api/v1/healthz')
+@app.route('/api/v1/healths')
 def health():
     return jsonify({'status': 'up'}), 200
 

@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: kesarikumaran/python-app
   pullPolicy: IfNotPresent
-  tag: 662c3c
+  tag: 0b9684
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""

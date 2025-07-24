@@ -13,7 +13,7 @@ def infoUrl():
         'description': 'This is a sample Flask application for demonstration purposes that I have deployed in Kubernetes.',
     })
 
-@app.route('/api/v1/healths')
+@app.route('/api/v1/healthz')
 def health():
     return jsonify({'status': 'up'}), 200
 

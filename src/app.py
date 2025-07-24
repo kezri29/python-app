@@ -4,11 +4,11 @@ import socket
 
 app = Flask(__name__)
 
-@app.route('/api/v1/info-url')
+@app.route('/api/v1/details')
 def infoUrl():
     return jsonify({
         'time': datetime.datetime.now().isoformat(),
-        'version': '1.0.0',
+        'version': '2.0.0',
         'hostname': socket.gethostname(),
         'description': 'This is a sample Flask application for demonstration purposes that I have deployed in Kubernetes.',
     })

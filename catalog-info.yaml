@@ -3,9 +3,8 @@ kind: Component
 metadata:
   name: python-app
   description: A python application as a test component.
-  # Example for optional annotations
-    annotations:
-      github.com/project-slug: kezri29/python-app
+  annotations:
+    github.com/project-slug: kezri29/python-app
 spec:
   type: service
   owner: development

@@ -5,6 +5,7 @@ metadata:
   description: A python application as a test component.
   annotations:
     github.com/project-slug: kezri29/python-app
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   owner: development

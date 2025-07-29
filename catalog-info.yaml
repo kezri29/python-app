@@ -6,6 +6,7 @@ metadata:
   annotations:
     github.com/project-slug: kezri29/python-app
     backstage.io/techdocs-ref: dir:.
+    scorecard/jsonDataUrl: https://raw.githubusercontent.com/kezri29/python-app/refs/heads/main/component-score.json
 spec:
   type: service
   owner: development

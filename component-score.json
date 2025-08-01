@@ -3,14 +3,14 @@
     "kind": "component",
     "name": "python-app"
   },
-  "generatedDateTimeUtc": "2024-01-15 10:00",
-  "scorePercent": 76,
+  "generatedDateTimeUtc": "2025-08-01 21:33",
+  "scorePercent": 70,
   "scoreSuccess": "good",
   "areaScores": [
     {
       "id": 1001,
       "title": "Code Quality",
-      "scorePercent": 80,
+      "scorePercent": 78,
       "scoreSuccess": "good",
       "scoreEntries": [
         {
@@ -20,20 +20,12 @@
           "scoreSuccess": "good",
           "howToScore": "Technical documentation should be present and accessible.",
           "scoreChoices": [
-            {
-              "Well documented with TechDocs": 100
-            },
-            {
-              "Basic documentation present": 80
-            },
-            {
-              "Minimal documentation": 40
-            },
-            {
-              "No documentation": 0
-            }
+            { "Well documented with comprehensive README and docs": 100 },
+            { "Basic documentation present": 80 },
+            { "Minimal documentation": 40 },
+            { "No documentation": 0 }
           ],
-          "details": "Technical documentation is present in TechDocs and covers basic functionality."
+          "details": "Good README with comprehensive documentation"
         },
         {
           "id": 2,
@@ -42,105 +34,148 @@
           "scoreSuccess": "good",
           "howToScore": "Code should be analyzed for quality and security issues.",
           "scoreChoices": [
-            {
-              "SonarCloud actively used with PR gates": 100
-            },
-            {
-              "Basic static analysis implemented": 70
-            },
-            {
-              "Manual code reviews only": 40
-            },
-            {
-              "No static analysis": 0
-            }
+            { "Comprehensive static analysis with automated checks": 100 },
+            { "Basic static analysis implemented": 70 },
+            { "Manual code reviews only": 40 },
+            { "No static analysis": 0 }
           ],
-          "details": "Basic static analysis is implemented but could be enhanced with automated PR gates."
+          "details": "Basic linting configuration found"
+        },
+        {
+          "id": 3,
+          "title": "Code Structure",
+          "scorePercent": 85,
+          "scoreSuccess": "good",
+          "howToScore": "Code should follow best practices and be well organized.",
+          "scoreChoices": [
+            { "Excellent structure with design patterns": 100 },
+            { "Good structure and organization": 80 },
+            { "Basic structure present": 60 },
+            { "Poor code organization": 20 }
+          ],
+          "details": "Well-organized code structure with clear patterns"
         }
       ]
     },
     {
       "id": 1002,
       "title": "Operations",
-      "scorePercent": 85,
+      "scorePercent": 75,
       "scoreSuccess": "good",
       "scoreEntries": [
         {
-          "id": 3,
+          "id": 4,
           "title": "CI/CD Pipeline",
           "scorePercent": 90,
           "scoreSuccess": "excellent",
           "howToScore": "Automated build and deployment pipeline should be in place.",
           "scoreChoices": [
-            {
-              "Full CI/CD with automated testing": 100
-            },
-            {
-              "CI/CD pipeline configured": 90
-            },
-            {
-              "Basic CI only": 50
-            },
-            {
-              "Manual deployment": 0
-            }
+            { "Full CI/CD with automated testing and deployment": 100 },
+            { "CI/CD pipeline configured": 90 },
+            { "Basic CI only": 50 },
+            { "Manual deployment": 0 }
           ],
-          "details": "GitHub Actions are configured for automated builds and deployments."
+          "details": "GitHub Actions workflow properly configured"
         },
         {
-          "id": 4,
-          "title": "Health Checks",
-          "scorePercent": 80,
+          "id": 5,
+          "title": "Dependency Management",
+          "scorePercent": 75,
           "scoreSuccess": "good",
-          "howToScore": "Application should provide health check endpoints.",
-          "scoreChecks": [
-            {
-              "livenessProbe": 25
-            },
-            {
-              "readinessProbe": 25
-            },
-            {
-              "Basic health endpoint": 25
-            },
-            {
-              "Detailed health info": 25
-            },
-            {
-              "None of the above": 0
-            }
+          "howToScore": "Dependencies should be properly managed and up to date.",
+          "scoreChoices": [
+            { "Automated dependency management with security scanning": 100 },
+            { "Regular dependency updates": 80 },
+            { "Basic dependency files present": 60 },
+            { "No dependency management": 0 }
           ],
-          "details": "Basic health checks are implemented with room for improvement."
+          "details": "Package dependencies regularly maintained"
+        },
+        {
+          "id": 6,
+          "title": "Configuration Management",
+          "scorePercent": 60,
+          "scoreSuccess": "warning",
+          "howToScore": "Application configuration should be externalized and secure.",
+          "scoreChoices": [
+            { "Environment-based config with secrets management": 100 },
+            { "Basic environment configuration": 70 },
+            { "Hardcoded configuration": 30 },
+            { "No configuration management": 0 }
+          ],
+          "details": "Basic environment configuration present"
         }
       ]
     },
     {
       "id": 1003,
-      "title": "Monitoring",
-      "scorePercent": 60,
+      "title": "Security",
+      "scorePercent": 72,
+      "scoreSuccess": "good",
+      "scoreEntries": [
+        {
+          "id": 7,
+          "title": "Security Practices",
+          "scorePercent": 65,
+          "scoreSuccess": "warning",
+          "howToScore": "Security best practices should be implemented.",
+          "scoreChoices": [
+            { "Comprehensive security measures implemented": 100 },
+            { "Basic security practices in place": 70 },
+            { "Minimal security considerations": 40 },
+            { "No security measures": 0 }
+          ],
+          "details": "Some security practices implemented"
+        },
+        {
+          "id": 8,
+          "title": "Secrets Management",
+          "scorePercent": 80,
+          "scoreSuccess": "good",
+          "howToScore": "Secrets and credentials should be properly managed.",
+          "scoreChoices": [
+            { "Secure secrets management with encryption": 100 },
+            { "Environment variables for secrets": 80 },
+            { "Some hardcoded secrets": 30 },
+            { "Exposed secrets in code": 0 }
+          ],
+          "details": "No hardcoded secrets detected"
+        }
+      ]
+    },
+    {
+      "id": 1004,
+      "title": "Testing",
+      "scorePercent": 55,
       "scoreSuccess": "warning",
       "scoreEntries": [
         {
-          "id": 5,
-          "title": "Application Monitoring",
+          "id": 9,
+          "title": "Test Coverage",
+          "scorePercent": 50,
+          "scoreSuccess": "warning",
+          "howToScore": "Automated tests should cover critical functionality.",
+          "scoreChoices": [
+            { "Comprehensive test suite with high coverage": 100 },
+            { "Good test coverage": 80 },
+            { "Basic tests present": 50 },
+            { "No automated tests": 0 }
+          ],
+          "details": "Limited test coverage identified"
+        },
+        {
+          "id": 10,
+          "title": "Test Quality",
           "scorePercent": 60,
           "scoreSuccess": "warning",
-          "howToScore": "Application should have monitoring and alerting configured.",
+          "howToScore": "Tests should be well-written and maintainable.",
           "scoreChoices": [
-            {
-              "Comprehensive monitoring with alerts": 100
-            },
-            {
-              "Basic monitoring alerts": 60
-            },
-            {
-              "Logging only": 30
-            },
-            {
-              "No monitoring": 0
-            }
+            { "Excellent test quality and organization": 100 },
+            { "Good test structure": 80 },
+            { "Basic test implementation": 60 },
+            { "Poor test quality": 20 }
           ],
-          "details": "Basic monitoring alerts are in place but comprehensive monitoring is needed."
+          "details": "Basic test implementation found"
         }
       ]
     }

@@ -3,21 +3,21 @@
     "kind": "component",
     "name": "python-app"
   },
-  "generatedDateTimeUtc": "2025-08-04 11:55",
-  "scorePercent": 33,
+  "generatedDateTimeUtc": "2025-08-04 11:57",
+  "scorePercent": 41,
   "scoreSuccess": "error",
   "areaScores": [
     {
       "id": 1001,
       "title": "Code Quality",
-      "scorePercent": 56,
+      "scorePercent": 53,
       "scoreSuccess": "warning",
       "scoreEntries": [
         {
           "id": 1,
           "title": "Documentation",
-          "scorePercent": 70,
-          "scoreSuccess": "good",
+          "scorePercent": 60,
+          "scoreSuccess": "warning",
           "howToScore": "Technical documentation should be present and accessible.",
           "scoreChoices": [
             {
@@ -33,12 +33,12 @@
               "No documentation": 0
             }
           ],
-          "details": "README likely exists but lacks comprehensive documentation given the project size."
+          "details": "README exists, but documentation could be improved"
         },
         {
           "id": 2,
           "title": "Static Code Analysis",
-          "scorePercent": 20,
+          "scorePercent": 30,
           "scoreSuccess": "error",
           "howToScore": "Code should be analyzed for quality and security issues.",
           "scoreChoices": [
@@ -55,12 +55,12 @@
               "No static analysis": 0
             }
           ],
-          "details": "No evidence of linting tools or code quality checks."
+          "details": "No static code analysis tools detected"
         },
         {
           "id": 3,
           "title": "Code Structure",
-          "scorePercent": 80,
+          "scorePercent": 70,
           "scoreSuccess": "good",
           "howToScore": "Code should follow best practices and be well organized.",
           "scoreChoices": [
@@ -77,20 +77,20 @@
               "Poor code organization": 20
             }
           ],
-          "details": "Simple code structure, easy to understand and maintain."
+          "details": "Simple Flask app, structure is decent for its size"
         }
       ]
     },
     {
       "id": 1002,
       "title": "Operations",
-      "scorePercent": 13,
+      "scorePercent": 36,
       "scoreSuccess": "error",
       "scoreEntries": [
         {
           "id": 4,
           "title": "CI/CD Pipeline",
-          "scorePercent": 0,
+          "scorePercent": 20,
           "scoreSuccess": "error",
           "howToScore": "Automated build and deployment pipeline should be in place.",
           "scoreChoices": [
@@ -107,13 +107,13 @@
               "Manual deployment": 0
             }
           ],
-          "details": "No CI/CD files detected."
+          "details": "No CI/CD pipeline detected"
         },
         {
           "id": 5,
           "title": "Dependency Management",
-          "scorePercent": 0,
-          "scoreSuccess": "error",
+          "scorePercent": 50,
+          "scoreSuccess": "warning",
           "howToScore": "Dependencies should be properly managed and up to date.",
           "scoreChoices": [
             {
@@ -129,7 +129,7 @@
               "No dependency management": 0
             }
           ],
-          "details": "No package files detected."
+          "details": "Basic dependency management using Flask and Python"
         },
         {
           "id": 6,
@@ -151,7 +151,7 @@
               "No configuration management": 0
             }
           ],
-          "details": "Basic environment configuration implied by the app.run() call but lack of details."
+          "details": "Environment configuration could be improved, currently runs in debug"
         }
       ]
     },
@@ -164,8 +164,8 @@
         {
           "id": 7,
           "title": "Security Practices",
-          "scorePercent": 30,
-          "scoreSuccess": "error",
+          "scorePercent": 50,
+          "scoreSuccess": "warning",
           "howToScore": "Security best practices should be implemented.",
           "scoreChoices": [
             {
@@ -181,13 +181,13 @@
               "No security measures": 0
             }
           ],
-          "details": "Minimal security practices evident, requires further security review."
+          "details": "Basic security practices, more security consideration is required"
         },
         {
           "id": 8,
           "title": "Secrets Management",
-          "scorePercent": 100,
-          "scoreSuccess": "excellent",
+          "scorePercent": 80,
+          "scoreSuccess": "good",
           "howToScore": "Secrets and credentials should be properly managed.",
           "scoreChoices": [
             {
@@ -203,20 +203,20 @@
               "Exposed secrets in code": 0
             }
           ],
-          "details": "No hardcoded secrets observed."
+          "details": "No hardcoded secrets detected"
         }
       ]
     },
     {
       "id": 1004,
       "title": "Testing",
-      "scorePercent": 0,
+      "scorePercent": 10,
       "scoreSuccess": "error",
       "scoreEntries": [
         {
           "id": 9,
           "title": "Test Coverage",
-          "scorePercent": 0,
+          "scorePercent": 10,
           "scoreSuccess": "error",
           "howToScore": "Automated tests should cover critical functionality.",
           "scoreChoices": [
@@ -233,12 +233,12 @@
               "No automated tests": 0
             }
           ],
-          "details": "No test files identified."
+          "details": "No test files found"
         },
         {
           "id": 10,
           "title": "Test Quality",
-          "scorePercent": 0,
+          "scorePercent": 10,
           "scoreSuccess": "error",
           "howToScore": "Tests should be well-written and maintainable.",
           "scoreChoices": [
@@ -255,7 +255,7 @@
               "Poor test quality": 20
             }
           ],
-          "details": "No test implementation found."
+          "details": "No test implementation found"
         }
       ]
     }

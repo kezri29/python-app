@@ -8,6 +8,7 @@ metadata:
     backstage.io/techdocs-ref: dir:.
     scorecard/jsonDataUrl: https://raw.githubusercontent.com/kezri29/python-app/refs/heads/main/component-score.json
     jira.com/project-key: MYSCRUMKEY
+    jira.com/incoming-issues-status: "To Do"
 spec:
   type: service
   owner: development

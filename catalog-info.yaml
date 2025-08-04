@@ -7,7 +7,7 @@ metadata:
     github.com/project-slug: kezri29/python-app
     backstage.io/techdocs-ref: dir:.
     scorecard/jsonDataUrl: https://raw.githubusercontent.com/kezri29/python-app/refs/heads/main/component-score.json
-    jira.com/project-key: SCRUM
+    jira.com/project-key: MYSCRUMKEY
 spec:
   type: service
   owner: development

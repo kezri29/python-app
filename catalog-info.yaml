@@ -9,7 +9,7 @@ metadata:
     scorecard/jsonDataUrl: https://raw.githubusercontent.com/kezri29/python-app/refs/heads/main/component-score.json
     jira.com/project-key: MYSCRUMKEY
     jira.com/incoming-issues-status: "To Do"
-    sonarqube.org/project-key: kezri29_NodeJs-BASICS
+    sonarqube.org/project-key: kezri29_python-app
 
 spec:
   type: service

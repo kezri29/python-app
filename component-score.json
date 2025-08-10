@@ -3,259 +3,127 @@
     "kind": "component",
     "name": "python-app"
   },
-  "generatedDateTimeUtc": "2025-08-04 11:57",
-  "scorePercent": 41,
-  "scoreSuccess": "error",
+  "generatedDateTimeUtc": "2025-08-10 14:44",
+  "scorePercent": 80,
+  "scoreSuccess": "good",
   "areaScores": [
     {
       "id": 1001,
-      "title": "Code Quality",
-      "scorePercent": 53,
+      "title": "Security",
+      "scorePercent": 60,
       "scoreSuccess": "warning",
       "scoreEntries": [
         {
           "id": 1,
-          "title": "Documentation",
+          "title": "Vulnerabilities",
           "scorePercent": 60,
           "scoreSuccess": "warning",
-          "howToScore": "Technical documentation should be present and accessible.",
+          "howToScore": "Code should be free from security vulnerabilities and hotspots.",
           "scoreChoices": [
             {
-              "Well documented with comprehensive README and docs": 100
+              "No vulnerabilities or security hotspots": 100
             },
             {
-              "Basic documentation present": 80
+              "Minimal vulnerabilities (\u22642) and hotspots (\u22645)": 80
             },
             {
-              "Minimal documentation": 40
+              "Moderate vulnerabilities (\u22645) and hotspots (\u226410)": 60
             },
             {
-              "No documentation": 0
+              "High number of vulnerabilities and hotspots": 30
             }
           ],
-          "details": "README exists, but documentation could be improved"
-        },
-        {
-          "id": 2,
-          "title": "Static Code Analysis",
-          "scorePercent": 30,
-          "scoreSuccess": "error",
-          "howToScore": "Code should be analyzed for quality and security issues.",
-          "scoreChoices": [
-            {
-              "Comprehensive static analysis with automated checks": 100
-            },
-            {
-              "Basic static analysis implemented": 70
-            },
-            {
-              "Manual code reviews only": 40
-            },
-            {
-              "No static analysis": 0
-            }
-          ],
-          "details": "No static code analysis tools detected"
-        },
-        {
-          "id": 3,
-          "title": "Code Structure",
-          "scorePercent": 70,
-          "scoreSuccess": "good",
-          "howToScore": "Code should follow best practices and be well organized.",
-          "scoreChoices": [
-            {
-              "Excellent structure with design patterns": 100
-            },
-            {
-              "Good structure and organization": 80
-            },
-            {
-              "Basic structure present": 60
-            },
-            {
-              "Poor code organization": 20
-            }
-          ],
-          "details": "Simple Flask app, structure is decent for its size"
+          "details": "Found 4 vulnerabilities and 3 security hotspots. Needs attention."
         }
       ]
     },
     {
       "id": 1002,
-      "title": "Operations",
-      "scorePercent": 36,
-      "scoreSuccess": "error",
+      "title": "Reliability",
+      "scorePercent": 100,
+      "scoreSuccess": "excellent",
       "scoreEntries": [
         {
-          "id": 4,
-          "title": "CI/CD Pipeline",
-          "scorePercent": 20,
-          "scoreSuccess": "error",
-          "howToScore": "Automated build and deployment pipeline should be in place.",
+          "id": 2,
+          "title": "Bug Count",
+          "scorePercent": 100,
+          "scoreSuccess": "excellent",
+          "howToScore": "Code should be free from bugs that affect reliability.",
           "scoreChoices": [
             {
-              "Full CI/CD with automated testing and deployment": 100
+              "No bugs detected": 100
             },
             {
-              "CI/CD pipeline configured": 90
+              "Minimal bugs (\u22643)": 80
             },
             {
-              "Basic CI only": 50
+              "Some bugs (\u226410)": 60
             },
             {
-              "Manual deployment": 0
+              "Many bugs (>10)": 30
             }
           ],
-          "details": "No CI/CD pipeline detected"
-        },
-        {
-          "id": 5,
-          "title": "Dependency Management",
-          "scorePercent": 50,
-          "scoreSuccess": "warning",
-          "howToScore": "Dependencies should be properly managed and up to date.",
-          "scoreChoices": [
-            {
-              "Automated dependency management with security scanning": 100
-            },
-            {
-              "Regular dependency updates": 80
-            },
-            {
-              "Basic dependency files present": 60
-            },
-            {
-              "No dependency management": 0
-            }
-          ],
-          "details": "Basic dependency management using Flask and Python"
-        },
-        {
-          "id": 6,
-          "title": "Configuration Management",
-          "scorePercent": 40,
-          "scoreSuccess": "error",
-          "howToScore": "Application configuration should be externalized and secure.",
-          "scoreChoices": [
-            {
-              "Environment-based config with secrets management": 100
-            },
-            {
-              "Basic environment configuration": 70
-            },
-            {
-              "Hardcoded configuration": 30
-            },
-            {
-              "No configuration management": 0
-            }
-          ],
-          "details": "Environment configuration could be improved, currently runs in debug"
+          "details": "No bugs detected."
         }
       ]
     },
     {
       "id": 1003,
-      "title": "Security",
-      "scorePercent": 65,
+      "title": "Maintainability",
+      "scorePercent": 60,
       "scoreSuccess": "warning",
       "scoreEntries": [
         {
-          "id": 7,
-          "title": "Security Practices",
-          "scorePercent": 50,
+          "id": 3,
+          "title": "Code Smells",
+          "scorePercent": 60,
           "scoreSuccess": "warning",
-          "howToScore": "Security best practices should be implemented.",
+          "howToScore": "Code should follow best practices and be easily maintainable.",
           "scoreChoices": [
             {
-              "Comprehensive security measures implemented": 100
+              "No code smells": 100
             },
             {
-              "Basic security practices in place": 70
+              "Few code smells (\u22645)": 80
             },
             {
-              "Minimal security considerations": 40
+              "Some code smells (\u226415)": 60
             },
             {
-              "No security measures": 0
+              "Many code smells (>15)": 30
             }
           ],
-          "details": "Basic security practices, more security consideration is required"
-        },
-        {
-          "id": 8,
-          "title": "Secrets Management",
-          "scorePercent": 80,
-          "scoreSuccess": "good",
-          "howToScore": "Secrets and credentials should be properly managed.",
-          "scoreChoices": [
-            {
-              "Secure secrets management with encryption": 100
-            },
-            {
-              "Environment variables for secrets": 80
-            },
-            {
-              "Some hardcoded secrets": 30
-            },
-            {
-              "Exposed secrets in code": 0
-            }
-          ],
-          "details": "No hardcoded secrets detected"
+          "details": "Found 9 code smells. Maintainability needs improvement."
         }
       ]
     },
     {
       "id": 1004,
-      "title": "Testing",
-      "scorePercent": 10,
-      "scoreSuccess": "error",
+      "title": "Code Duplication",
+      "scorePercent": 100,
+      "scoreSuccess": "excellent",
       "scoreEntries": [
         {
-          "id": 9,
-          "title": "Test Coverage",
-          "scorePercent": 10,
-          "scoreSuccess": "error",
-          "howToScore": "Automated tests should cover critical functionality.",
+          "id": 4,
+          "title": "Duplication Percentage",
+          "scorePercent": 100,
+          "scoreSuccess": "excellent",
+          "howToScore": "Code should minimize duplication for better maintainability.",
           "scoreChoices": [
             {
-              "Comprehensive test suite with high coverage": 100
+              "Low duplication (\u22643%)": 100
             },
             {
-              "Good test coverage": 80
+              "Acceptable duplication (\u22645%)": 80
             },
             {
-              "Basic tests present": 50
+              "High duplication (\u226410%)": 60
             },
             {
-              "No automated tests": 0
+              "Very high duplication (>10%)": 30
             }
           ],
-          "details": "No test files found"
-        },
-        {
-          "id": 10,
-          "title": "Test Quality",
-          "scorePercent": 10,
-          "scoreSuccess": "error",
-          "howToScore": "Tests should be well-written and maintainable.",
-          "scoreChoices": [
-            {
-              "Excellent test quality and organization": 100
-            },
-            {
-              "Good test structure": 80
-            },
-            {
-              "Basic test implementation": 60
-            },
-            {
-              "Poor test quality": 20
-            }
-          ],
-          "details": "No test implementation found"
+          "details": "Low code duplication: 0.0%"
         }
       ]
     }

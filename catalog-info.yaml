@@ -10,7 +10,7 @@ metadata:
     jira.com/project-key: MYSCRUMKEY
     jira.com/incoming-issues-status: "To Do"
     sonarqube.org/project-key: kezri29_python-app
-
+    forms.office.com/feedback: https://forms.office.com/Pages/ResponsePage.aspx?id=uOVduNM_IEuTKA0mjbEoL6dXHXFH-MJOtXXbXh4OPMdUMjNMTDhCVkpGMVpDTDRFNlpRRVFQUTBJQy4u
 spec:
   type: service
   owner: development
